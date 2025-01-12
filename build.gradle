@@ -31,9 +31,18 @@ dependencies {
 }
 
 test {
-    useTestNG()
-
-    testng {
-        suites 'src/test/resources/testng.xml'  // Path to your TestNG XML suite file (if you have one)
+    useTestNG(){
+        suites './src/test/resources/testng.xml'
     }
+
+
+    testLogging {
+        events 'passed', 'failed', 'skipped'
+    }
+
+    reports {
+        junitXml.enabled = true  // Enable JUnit XML reporting
+        html.enabled = true      // Enable HTML report
+    }
+
 }
