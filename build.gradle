@@ -32,4 +32,8 @@ dependencies {
 
 test {
     useTestNG()
+
+    testng {
+        suites 'src/test/resources/testng.xml'  // Path to your TestNG XML suite file (if you have one)
+    }
 }
