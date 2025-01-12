@@ -34,4 +34,8 @@ test {
     useTestNG(){
         suites './src/test/resources/testng.xml'
     }
+
+    testLogging {
+        events 'passed', 'failed', 'skipped'  // Log test events (e.g., passed, failed, skipped)
+    }
 }
